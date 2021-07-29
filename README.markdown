@@ -1,6 +1,3 @@
-# Glitch Effect
+# PROJECT PARADOX
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/peace-among-worlds/pen/OJpKxEv](https://codepen.io/peace-among-worlds/pen/OJpKxEv).
-
-I got this image from here
-http://placeimg.com/
+A sandpit of sorts to play around with animations, plugins and showcasing creative projects both digital & physical. 
