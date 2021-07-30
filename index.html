@@ -14,16 +14,19 @@
 		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
-	<body class="demo-1 loading">
+	<body>
 
-		<main>
+	<div id="start" class="demo-1 loading">
+
+		<div class="main">
 			<div class="content content--fixed">
 				<header class="codrops-header">
 					<h1 class="codrops-header__title">Declassified</h1>
 				</header>
-			
+				
 			</div>
-			<div class="content">
+
+			<div class="hero_content">
 				<div class="glitch">
 					<div class="glitch__img"></div>
 					<div class="glitch__img"></div>
@@ -33,11 +36,17 @@
 					</div>
 				</div>
 				<h2 class="content__title">Project Paradox</h2>
-				<p class="content__text">Stationed behind pluto, a decades old receiver has come back on-line. It has received myriad signals of Xenos life from the across the universe. Decryption will take some time.</p>
-				
+				<p class="content__intro">"Stationed behind pluto, a decades old SETI receiver has come back on-line. 
+						With it, so too have myriad signals of Xenos life from the across the universe. Decryption is paramount, 
+						but it will take some time" - NPNP Space Institute</p>
+				<p class="content__text">Results will be open source, published here for analysis...
+				</p>	
 			</div>
-		</main>
+		</div>
+
+	</div>
+
+	</body>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/demo.js"></script>
-	</body>
 </html>
