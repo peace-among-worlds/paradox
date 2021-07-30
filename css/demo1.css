@@ -56,8 +56,9 @@
 }
 
 .content__text {
-	font-family: 'IM Fell English', serif;
-	position: absolute;
+	font-family: 'Source Code Pro:wght@500', monospace;
+	color: #ffffff;
+	position: relative;
 	font-size: 1.5em;
 	top: 4em;
 	right: 10vw;
