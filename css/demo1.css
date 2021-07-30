@@ -23,7 +23,7 @@
 }
 
 .imgloaded .content__title,
-.imgloaded .content__text {
+.imgloaded .content__intro {
 	animation-name: glitch-anim-text;
 	animation-duration: var(--time-anim);
 	animation-timing-function: linear;
