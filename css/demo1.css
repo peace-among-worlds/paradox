@@ -27,16 +27,32 @@
 	animation-name: glitch-anim-text;
 	animation-duration: var(--time-anim);
 	animation-timing-function: linear;
-	// default is 1 iteration, change below if needed//
+/* 	// default is 1 iteration, change below if needed// */
 	/* animation-iteration-count: infinite; */
 }
 
 .content__title {
 	font-size: 8vw;
-	margin: 35vh 0 0 0;
-	position: relative;
+	color: #ffffff;
+	margin: 30vh 0 0 0;
+	position: absolute;
+	top: 4em;
+	right: 20vw;
 	font-family: 'Source Code Pro', monospace;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+
+.content__intro {
+	color: #ffffff;
+	font-family: 'Source Code Pro:wght@500', monospace;
+	position: absolute;
+	font-size: 1.5em;
+	top: 4em;
+	right: 10vw;
+	max-width: 500px;
+	text-align: right;
+	font-weight: 400;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
 
 .content__text {
@@ -46,7 +62,7 @@
 	top: 4em;
 	right: 10vw;
 	max-width: 500px;
-	text-align: right;
+	text-align: left;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
