@@ -21,12 +21,12 @@ body {
 }
 
 /* Fade effect */
-.js body {
+.js .start {
 	opacity: 0;
 	transition: opacity 0.3s;
 }
 
-.js body.render {
+.js .start.render {
 	opacity: 1;
 }
 
@@ -120,13 +120,22 @@ main {
 	width: 100%;
 }
 
-.content {
+.hero_content {
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
 	min-height: 100vh;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 5em;
 }
 
 .content--fixed {
@@ -143,10 +152,10 @@ main {
 	padding: 1.5em;
 	pointer-events: none;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: auto auto 4em;
+/* 	grid-template-rows: auto auto 4em; */
 	grid-template-areas: 'header header'
-	'... ...'
-	'github demos';
+/* 	'... ...'
+	'github demos'; */
 }
 
 .content--fixed a {
