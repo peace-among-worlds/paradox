@@ -22,7 +22,7 @@
 	--blend-color-5: #af4949;
 }
 
-.imgloaded .content__title,
+.imgloaded .codrops-header2,
 .imgloaded .content__intro {
 	animation-name: glitch-anim-text;
 	animation-duration: var(--time-anim);
