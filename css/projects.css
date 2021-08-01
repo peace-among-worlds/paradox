@@ -20,18 +20,6 @@
 	transform: translate(5px, 5px);
 }
 
-/* #flex-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: 580px;
-  margin: 30px;
-  gap: 30px;
-} */
-
 #grid {
   display: grid;
   grid-template-rows: 30vh repeat(3, 1fr);
