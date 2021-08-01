@@ -126,14 +126,14 @@ main {
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-	min-height: 100vh;
+	min-height: 150vh;
 }
 
 .content {
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin: 0 auto;
+	margin: auto;
 	min-height: 100vh;
 	padding: 5em;
 }
@@ -182,19 +182,8 @@ main {
 	justify-self: start;
 }
 
-.codrops-header2 {
-	position: relative;
-	z-index: 100;
-	flex-direction: row;
-	align-items: flex-end;
-	align-items: center;
-	align-self: end;
-	grid-area: header;
-	justify-self: end;
-}
-
 .codrops-header__title {
-	font-size: 1em;
+	font-size: 2em;
 	font-weight: bold;
 	margin: 0;
 	color: #ffffff;
