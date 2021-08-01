@@ -1,13 +1,4 @@
-/**
- * demo.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2017, Codrops
- * http://www.codrops.com
- */
+
  {
 	setTimeout(() => document.getElementById("start").classList.add('render'), 60);
 	const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
@@ -39,4 +30,7 @@
 		document.getElementById("start").classList.remove('loading');
 		document.getElementById("start").classList.add('imgloaded');
 	});
+	 
+	const decoder = document.getElementById("decoding");
+     	 instance = disorder(decoder);
 }
