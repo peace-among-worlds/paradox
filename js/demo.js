@@ -32,5 +32,13 @@
 	});
 	 
 	const decoder = document.getElementById("decoding");
-     	 instance = disorder(decoder);
+		decoder.onclick = function() {
+			disorder(decoder);
+		};
+
+	// https://www.cssscript.com/decoding-effect-scramblejs/
+
+	var when_i_click = function(){
+		alert('Awaiting further transmissions to begin decryption');
+	};
 }
