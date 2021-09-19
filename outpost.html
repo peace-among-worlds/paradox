@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> -->
+		<title>Project Paradox | v1 | The Outpost</title>
+		<meta name="description" content="Summary of findings about the inhabited outpost central to Project Paradox" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">		
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+		<link rel="stylesheet" type="text/css" href="css/projects.css" /> 
+    <style type="text/css">
+
+        #container {
+          margin: 10em;
+          text-align: center;
+        }
+
+        #text {
+          display: inline-block;
+          color: #fff;
+          border-right: 3px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+      <div id="text"></div>
+    </div>
+
+  <script type="text/javascript">
+
+    // List of sentences
+    var _CONTENT = [ 
+    "Human:",
+    "By all accounts, Paradox should not exist.", 
+    "Existing in an anomaly at the junction of two wormholes.", 
+    "It appears stranded travellers from all over the galaxy seek refuge and connection in a strange and bizarre land.", 
+    "AI:",
+    "The beautiful thing is that you are all in the same place at the same time.",
+    "But, so is everybody else.",
+    "Paradox is really a game of radical inclusion and chaos.", 
+    "In a world of plurality and wonder, you play as a group of out-of-place creatures.", 
+    "The world will, at times, be hostile to you, but more often than not, you will be the instigators of the chaos.", 
+    "As a result, you will have a hand in shaping the world itself.",
+    "Paradox is a game about connections, and the connections you forge with the other players around the table.", 
+    "It is a game about how we band together to take our world into our own hands, and how we will reshape it to suit ourselves and the people we love.",
+    "By all accounts, Paradox should not exist. Lying between dimensions, this remote market outpost is home to colourful characters from all over: in search of connection, music or their next bounty.",
+    "It's time to join."
+    ];
+
+    // Current sentence being processed
+    var _PART = 0;
+
+    // Character number of the current sentence being processed 
+    var _PART_INDEX = 0;
+
+    // Holds the handle returned from setInterval
+    var _INTERVAL_VAL;
+
+    // Element that holds the text
+    var _ELEMENT = document.querySelector("#text");
+
+    // Implements typing effect
+    function Type() { 
+      var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+      _ELEMENT.innerHTML = text;
+      _PART_INDEX++;
+
+      // If full sentence has been displayed then start to delete the sentence after some time
+      if(text === _CONTENT[_PART]) {
+        clearInterval(_INTERVAL_VAL);
+        setTimeout(function() {
+          _INTERVAL_VAL = setInterval(Delete, 0.01);
+        }, 1000);
+      }
+    }
+
+    // Implements deleting effect
+    function Delete() {
+      var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+      _ELEMENT.innerHTML = text;
+      _PART_INDEX--;
+
+      // If sentence has been deleted then start to display the next sentence
+      if(text === '') {
+        clearInterval(_INTERVAL_VAL);
+
+        // If last sentence then display the first one, else move to the next
+        if(_PART == (_CONTENT.length - 1))
+          _PART = 0;
+        else
+          _PART++;
+        _PART_INDEX = 0;
+
+        // Start to display the next sentence after some time
+        setTimeout(function() {
+          _INTERVAL_VAL = setInterval(Type, 100);
+        }, 200);
+      }
+    }
+
+    // Start the typing effect on load
+    _INTERVAL_VAL = setInterval(Type, 1);
+
+  </script>
+
+</body>
+
+</html>
+
